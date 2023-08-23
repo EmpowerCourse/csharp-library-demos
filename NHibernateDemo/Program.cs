@@ -21,10 +21,4 @@ var sessionFactory = Fluently.Configure()
 
 using (var session = sessionFactory.OpenSession())
 {
-    var customers = await session.Query<Customer>().ToListAsync();
-
-    foreach (var customer in customers)
-    {
-        Console.WriteLine(customer.Name);
-    }
 }
